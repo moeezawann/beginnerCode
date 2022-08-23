@@ -1,0 +1,22 @@
+int main(){
+float hieghtInInches;
+float weight;
+cout << " Please enter your height in inches :\n ";
+cin >> hieghtInInches;
+cout << " please enter your weight in lbs: \n";
+cin >> weight;
+float hieghtmult = (hieghtInInches * hieghtInInches);
+float bmi = 703 * weight / hieghtmult;
+if (bmi <= 18.4) {
+    cout << " Your bmi is" << bmi << " and you are underweight ";
+} else if ( bmi <= 25) {
+cout << " Your bmi is " << bmi << " and it is normal.";}
+else if ( bmi <= 39.9 ){
+    cout << " Your bmi is " << bmi << " and you are overweight";
+} else {
+cout << " you are obese ";
+}
+
+system ("pause>0");
+ return 0;
+}
