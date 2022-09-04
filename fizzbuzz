@@ -13,7 +13,7 @@ for (int i = 0; i <= num; i++){
     }
 }
 
-
+// num variable is not needed, for some reason you hve to make all of the "%" statements equal to "==" instead of "=" that is why making i <= 100 in for loop was not wokring.
 
 system ("pause>0");
  return 0;
