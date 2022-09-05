@@ -5,6 +5,7 @@ cout << " 2. Deposit" << endl;
 cout << " 3. Withdraw"<< endl;
  cout << "*******************" << endl;
 }
+
 int main(){
 // ATM Machine functions >> check balance, deposit, withdraw, show menu
 double balance = 500;
@@ -16,7 +17,7 @@ switch (option){
 
 case 1: cout << " Your balance is: " << balance << " dollars. " << endl; break;
 
-case 2: {cout << " Deposit amount: ";
+case 2:{ cout << " Deposit amount: ";
 int deposit;
 cin >> deposit;
 int num;
@@ -26,15 +27,18 @@ int trueNumber = 1;
 int falseNumber = 0;
 if (num == trueNumber) {
  cout << " Your new balance is " << balance + deposit << " dollars ";}
- else {do{ cout << " Re-enter deposit amount ";
+ else if ((num != trueNumber)) {do{ cout << " Re-enter deposit amount ";
           cin >> deposit;
            cout << " Is your deposit amount " << deposit << "? If Yes type in 1 if No type in 0: ";
-} while (num == falseNumber);}
+           if (num == trueNumber) {
+            cout << " Your new deposit is " << balance + deposit << " dollars \n";
+           }
+} while (num != trueNumber);
  //if (num == trueNumber) {
 //cout << " Your new balance is " << balance + deposit << " dollars " << endl;}
-break;}
+break;} }
 
-case 3:
+case 3:{
    cout << " How much would you like to withdraw? Your balance is " << balance << " dollars " << endl;
    int withdraw;
    cin >> withdraw;
@@ -43,14 +47,18 @@ case 3:
    cin >> num1;
    int trueNum = 1;
    int falseNum = 0;
-   if (withdraw <= balance && num1 == trueNum) {
- cout << " Your new balance is " << balance - withdraw << " dollars ";} else
   {do{ cout << " Re-enter withdraw amount ";
    cin >> withdraw;
-    cout << " Confirm your withdraw amount " << withdraw << "? If Yes type in 1 if No type in 0: ";
-    }
- while (num1 == falseNum && withdraw > balance);  if (withdraw <= balance && num1 == trueNum) {
+      cout << " Confirm your withdraw amount " << withdraw << "? If Yes type in 1 if No type in 0: ";}
+   while (num1 != trueNum && withdraw > balance);
+    if (withdraw <= balance && num1 == trueNum) {
  cout << " Your new balance is " << balance - withdraw << " dollars ";}
- }
+    }
+
  break;
+
 }
+}
+system ("pause>0");
+ return 0;
+  }
