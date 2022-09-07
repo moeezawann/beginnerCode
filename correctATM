@@ -1,0 +1,68 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include<iomanip>
+using std:: cout;
+using std:: endl;
+using std:: string;
+using std:: cin;
+
+void showMenu(){
+cout << " ********** MENU ********** " << endl;
+cout << " 1. Check Balance" << endl;
+cout << " 2. Deposit" << endl;
+cout << " 3. Withdraw"<< endl;
+ cout << "*******************" << endl;
+}
+
+int main(){
+// ATM Machine functions >> check balance, deposit, withdraw, show menu
+double balance = 500;
+showMenu();
+int option;
+cout << " Option: ";
+cin >> option;
+switch (option){
+case 1: cout << " Your balance is: " <<"$" << balance << endl; break;
+
+case 2: cout << " Deposit amount: ";
+int deposit;
+cin >> deposit;
+int num;
+cout << " Is your deposit amount " << deposit << "? If yes type in 1 if no type in 0: ";
+cin >> num;
+if (num == 1) {
+ cout << " Your new balance is " << (balance + deposit) << " dollars " << endl;}
+     do{cout << " Re-enter deposit amount ";
+          cin >> deposit;
+           cout << " Is your deposit amount " << deposit << "? If Yes type in 1 if No type in 0: ";
+           cin >> num;
+           } while(num == 0);
+ if (num == 1) {
+    cout << " Your new balance is " << (balance + deposit) << " dollars ";
+ }
+
+case 3:
+   cout << " How much would you like to withdraw? Your balance is " << balance << " dollars " << endl;
+   int withdraw;
+   cin >> withdraw;
+   cout << " Withdraw " << withdraw << " Dollars? If Yes select 1 if No select 0: ";
+   int num1;
+   cin >> num1;
+   if (balance > withdraw && num1 == 1) {
+ cout << " Your new balance is " << (balance - withdraw) << " dollars " << endl;}
+  else if (num1 == 0) {
+      do{
+ cout << " Re-enter withdraw amount ";
+   cin >> withdraw;
+      cout << " Confirm your withdraw amount " << withdraw << "? If Yes type in 1 if No type in 0: ";
+      cin >> num1;}  while (num1 == 0 && balance > withdraw);}
+      if (num1 == 1) {
+       cout << " Your new balance is " << (balance - withdraw) << " dollars " << endl;
+      }     break;
+default: cout << " Invalid Number " << endl;
+
+system ("pause>0");
+ return 0;
+  }
+}
