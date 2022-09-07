@@ -40,7 +40,7 @@ if (num == 1) {
            } while(num == 0);
  if (num == 1) {
     cout << " Your new balance is " << (balance + deposit) << " dollars ";
- }
+ } break;
 
 case 3:
    cout << " How much would you like to withdraw? Your balance is " << balance << " dollars " << endl;
