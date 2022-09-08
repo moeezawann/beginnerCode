@@ -1,0 +1,40 @@
+class americanChef {
+public:
+    void chefmakes(){
+    cout << "chef makes chicken " << endl;}
+   void chefmakesbeef() {
+   cout << " chef makes beef steak " << endl;
+   }
+   private:
+   int chefAddition(int x, int y){
+   int z;
+   z = x + y;
+   cout << " addition of "<< x << " and " << y << " is " << z << endl;
+   return z;
+   }
+
+
+};
+class italianchef: public americanChef{
+public:
+    void chefmakesLasagna() {
+    cout << " Chef makes lasagna "<< endl;
+    }
+
+
+};
+
+
+int main(){
+    string broccoli = " chef makes cheese brccoli ";
+americanChef americanchef1;
+americanchef1.chefmakesbeef();
+italianchef italianchef1;
+italianchef1.chefmakesbeef();
+americanchef1.chefAddition(10,3); // this will not work since the ched addition has now become private.
+
+
+system ("pause>0");
+ return 0;
+
+}
