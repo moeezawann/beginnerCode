@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include<iomanip>
+using std:: cout;
+using std:: endl;
+using std:: string;
+using std:: cin;
+
+int hostvar1, guestvar1;
+int guesscount = 0, outofGuesses = 3;
+void guessingGame(){
+    cout << " welcome to the guessing game " << endl;
+   cout << " Host please enter your number: ";
+   cin >> hostvar1;
+   system("cls");
+   cout << " You will have 3 chances "<< endl;
+    while(guestvar1 != hostvar1 && guesscount < outofGuesses)
+        { cout << "Enter your " << (guesscount + 1) << " guess: " ;
+     cin >> guestvar1;
+     guesscount++;
+     }
+    if (hostvar1 == guestvar1 && guesscount <= outofGuesses) {
+        cout << " You guessed the right number " << endl;
+    } else if (hostvar1 != guestvar1 || guesscount > outofGuesses) {
+    cout << " You lose " << endl;
+    }
+
+
+
+
+
+
+}
+int main(){
+    guessingGame();
+
+
+system ("pause>0");
+ return 0;
+
+}
