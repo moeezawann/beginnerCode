@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include<iomanip>
+using std:: cout;
+using std:: endl;
+using std:: string;
+using std:: cin;
+using std:: setw;
+
+int hieght, width;
+char op;
+void makeShape() {
+cout << " Select a height: ";
+cin >> hieght;
+/*cout << " Select a width ";
+cin >> width; */
+cout << " Select a symbol: ";
+cin >> op;
+
+// the first below for loop counts from 1 to 5 but it only repeats "*" going down the line
+//where as the second for loop adds a "*" on every line as it goes down to the line.
+// so if the lentgh was 5 it would add a a star in this order ex.. *,**,***,****, on a new line everytime.
+
+for (int h = 1; h <= hieght; h++){
+        for (int i = 1; i <= h; i++){
+    cout << setw(3) << op;}
+    cout << endl;
+    }
+   cout << endl << endl;
+
+    for (int h = hieght; h >= 1; h--){
+        for (int i = 1; i <= h; i++){
+    cout << setw(3) << op;}
+    cout << endl;
+    }
+    cout << endl << endl; 
+
+
+
+}
