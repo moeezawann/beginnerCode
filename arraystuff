@@ -1,0 +1,18 @@
+   // float monthlySalaray [12] = {1234, 1345, 2234, 6754, 456, 434, 456, 123, 1234, 321, 1234, 221};
+    //float total = 0;
+    //for (int i = 0; i <= 11; i++)
+      //      cout << " enter your monthly salary for month " << i + 1 << " : ";
+    //    cin >> monthlySalaray[i];
+      //   total += monthlySalaray[i];
+
+    //
+
+
+   //  float total = monthlySalaray [0] + monthlySalaray [1] + monthlySalaray [2] +
+   // monthlySalaray [3] + monthlySalaray [4] + monthlySalaray [5] + monthlySalaray [6] +
+   //  monthlySalaray [7] + monthlySalaray [8] + monthlySalaray [9] + monthlySalaray [10] + monthlySalaray [11] ;
+    //cout << " Your total for the year is " << total << " dollars " << endl;
+    //int monthlyAverage = total/ 12;
+    //cout << " Your monthly average is " <<  monthlyAverage << " dollars." << endl;
+   // int twoYears = monthlyAverage * 24;
+   // cout << " In two years you might make roughly " << twoYears << " dollars " << endl;
