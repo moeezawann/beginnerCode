@@ -6,6 +6,8 @@ using std:: cout;
 using std:: endl;
 using std:: string;
 using std:: cin;
+using std:: setw;
+
 
 double balance = 500;
 int option;
@@ -29,16 +31,22 @@ int num;
 cout << " Is your deposit amount " << deposit << "? If yes type in 1 if no type in 0: ";
 cin >> num;
 if (num == 1) {
- cout << " Your new balance is " << (balance + deposit) << " dollars " << endl;}
- else if (num != 1){ do{cout << " Re-enter deposit amount ";
+    cout << " Your new balance is " << (balance + deposit) << " dollars " << endl;
+ }
+ else if (num != 1){
+        do{
+            cout << " Re-enter deposit amount ";
           cin >> deposit;
            cout << " Confirm your deposit amount " << deposit << "? If Yes type in 1 if No type in 0: ";
            cin >> num;
            if (num == 1)
-    {cout << " Your new balance is " << (balance + deposit) << " dollars " << endl;}
+                {
+                    cout << " Your new balance is " << (balance + deposit) << " dollars " << endl;
+                }
             } while(num == 0);
 
- } break;
+ }
+ break;
 
 case 3:
    cout << " How much would you like to withdraw? Your balance is " << balance << " dollars " << endl;
@@ -63,23 +71,26 @@ default: cout << " Invalid Number " << endl;
 }
 }
 
-int main(){
-balance;
-showMenu();
-cout << " Option: ";
-cin >> option;
-aTM_Option();
-cout << " If you are finished type in 2. If not type in 3: ";
-int num2;
-cin >> num2;
-if (num2 == 2){
-    cout << " Thank you for using our service. Have a good day!" << endl;}
+int mai`n(){
+    showMenu();
+    cout << " Option: ";
+    cin >> option;
+    aTM_Option();
+    cout << " If you are finished type in 2. If not type in 3: ";
+    int num2;
+    cin >> num2;
+    if (num2 == 2){
+        cout << " Thank you for using our service. Have a good day!" << endl;
+    }
+
     else if (num2 != 2){
      do{
-showMenu();
-cin >> option;
-aTM_Option();
-cin >> num2;} while(num2 = 3); }
+            showMenu();
+            cin >> option;
+            aTM_Option();
+            cin >> num2;
+        }
+        while(num2 == 3); }
 
 system ("pause>0");
  return 0;
